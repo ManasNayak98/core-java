@@ -1,0 +1,1293 @@
+oops concept
+------------
+oops is a object oriented programming language.It is having 6 pillars 
+1. class
+2.object and method
+3.Abstraction
+4.Polymorphism
+5.Inheritance
+6.Encapsulation
+
+1.What is class 
+-Class is a collection of object and template/blueprint from objects are created.
+Syntax:
+    Access-modifier class classname{
+    
+}
+public class man{
+  methods 
+  constructors
+  Fields               
+  Blocks
+  Nested class
+}
+
+Example:
+-> Animal is a class and tiger , dogs are the object of class and different task they act as 
+   like run ,bark are the methods.
+
+2.What is method
+Method is a block of code when we will call it performs specific actions 
+which is mentioned in it.
+Syntax:
+Accessmodifier return-type methodname(different parameters){
+{
+  
+}
+
+Example:
+public void run(int a,int b){
+  
+}
+
+*What is Object 
+Object is a member of a class. we can say group of object is called as class.
+- Each object consists of 3 major parts
+ 1.Identity : Name of object
+
+ 2.Attribute/State: Color,Breed,age
+
+ 3.Behaviour:Run, eat
+
+*How to create an object
+Object is creating by using different types
+1.By using new keyword
+2.By using newInstance()
+3.By using clone()
+4.By using deserialization
+5.By using factory methods
+
+But majorly we are creating object by using new keyword.
+
+
+*We can create object by using 3 ways
+1.Declaration:It is declaring a variable name with an object type
+              Example: Animal doggy;
+
+2.Instantiation:This is when memory is allocated for an object.
+                The new keyword is used to create the object.
+                Example:doggy=new
+
+3.Initialization:The new keyword is followed by a call a constructor.
+                 we are using constructor because of initializes the new object.
+                 Example:doogy=new Animal();
+
+We create an object like 
+Animal doggy=new Animal();
+
+Then 
+Objectname.methodname();
+doggy.bark();
+
+
+
+*What is Constructor
+Constructor is a block (Similar to method) same name as class name.
+-It does not have any return type,not even void.
+-constructor is applicable for the 4 types of access modifier
+ public,protected,default and private
+-It executes automatically when we create an object.
+
+
+class Test{
+   public Test{
+       
+   }
+}
+
+There are 3 types of constructor 
+1.Default constructor
+2.No-argument constructor
+3.Argument constructor
+
+
+*What is OOPs concept
+OOPs is a object oriented programming system/structured.
+-It is a paradigm 
+
+
+1.Inheritance
+-------------
+Inheritance is a type of OOPs concept which we can inherit the properties of parent class to child class.
+- In child class  which we can create one object and that object acquires all the properties from 
+  parent class.
+-We can say it IS-A relationship which is known as parent-child relationship.
+
+*Why we use Inheritance
+We are using inheritance beacause
+- code reusability
+- Reduce  redundancy means that can remove unnecessary code. 
+
+Types of Inheritance
+1.Single inheritance
+2.Multilevel inheritance
+3.Heirarchical inheritance 
+4.Multiple inheritance
+5.Hybrid inheritance
+
+1.Single Inheritance
+---------------------
+In this inheritance one class is inherit another class.
+EX: Dog inherits Animal class 
+
+2.Multilevel inheritance
+-------------------------
+In this inheritance first one class inherits another class and the particular class again behaves like a parent class for another subclass is called multilevel inheritance.
+
+3.Heirarchical inheritance
+--------------------------
+when two or more class inherits one single class called as heirarchical inheritance.
+
+*NOTE
+We can not use Multiple and Hybrid inheritance in java.
+
+2.Polymorphism
+---------------
+Poly means "Many" and morphos means "Form". It means it occurs when we have many classes that are related to each other by inheritance.
+
+1.What is Method Overloading 
+-when a class is having same name method with different parameter is known as Method overloading.
+Example:
+ class A {
+  void run(){
+
+}
+  void run(int a){
+   
+}
+}
+
+Here both the method name is same thats why we are calling method overloading.
+
+*There are 2 ways to overload the method
+1.BY changing the number of arguments
+2.By changing the data type
+
+NOTE:
+Method overloading is also known as Compile Time Polymorphism.
+
+Rules of method overloading
+---------------------------
+-In same class we are using different method of same name.
+-Different argumemnts 
+   - Number of arguments 
+   - Number of datatypes
+   - Sequene of datatype
+
+2.Method Overriding
+-------------------
+- If a subclass(Child class) has same method name as the parent class method name is known as Method Overriding.
+
+Use Of method overriding
+------------------------
+-In this method we can say to provide the same method name of parent class as well as child class.
+-we used for the runtime polymorphism.
+
+Rules of Method overriding
+--------------------------
+- The method name must have same as both parent class and child class.
+- The method must have same parameter as in parent class.
+- There must be an IS-A relationship(Inheritance).
+- It should be same method name
+- It should be diiferent class name.
+- It should be same argument
+   -Number of arguments
+   -Type of arguments
+   -Sequence of arguments
+
+Example:
+  class Test{
+    void run(){
+
+}
+}
+//OVERRIDE
+class Test1 extends Test{
+  void run(){
+   
+}
+public static void main(String[] args){
+   Test1 t=new Test1();
+  t.run();
+}
+}
+
+
+3.ABSTRACTION
+--------------
+Abstraction is a oops concept in which the process of hiding the implementation details and showing only functionality to the user.
+
+*Ways of achieve the Abstraction
+1.By Abstract class
+2.By Interface
+
+Abstract class
+--------------
+A class in which is declared with the abstract keyword as an abstract class.It can have abstract and non-abstract methods.
+- We can not create object for the abstract class.
+   
+Rules of Abstract class
+-----------------------
+-An abstract class must be declared with an abstract keyword.
+-It can have abstract and non-abstract method.
+-We can not create object for abstract class
+-It can have constructors and static methods.
+
+Abstract method
+---------------
+- A method which is declared as abstract and does not have any implementation is known as abstract method.
+Example:
+  abstract void run();  //abstract method
+
+Example:
+
+  package Oops;
+
+abstract class vehicle{
+	abstract void run();
+}
+
+class car extends vehicle{
+	void run() {
+		System.out.println("car is running");
+	}
+}
+public class Abstraction extends vehicle{
+     void run() {
+    	 System.out.println("It is concept");
+     }
+     public static void main(String[] args) {
+		car c=new car();
+		c.run();
+		Abstraction a=new Abstraction();
+		a.run();
+	}
+}
+
+
+INTERFACE
+---------
+-Interface is a blueprint of the class .It has static constants and abstract methods.
+-The interface im java is a mechanism to achieve the abstraction.
+-It must have abstract methods in java interface.In method there is no body inside the method.
+
+*Why use java Interface
+-It is used to achieve abstraction.
+- By interface we can support functionality of multiple inheritance.
+-It can be used for the loose coupling.
+
+syntax:
+  
+interface i{
+  public abstract void run();
+}
+class test implements i{
+ public void run(){
+
+}
+}
+ Example:
+ 
+package Oops;
+
+interface i1{
+	void show();
+}
+public class Interface implements i1 {
+   public void show() {
+	   System.out.println("10");
+   }
+   public static void main(String[] args) {
+	Interface i=new Interface();
+	i.show();
+   }
+}
+
+
+
+4.Encapsulation
+----------------
+-Encapsulation is a part of OOPs concept which is a process of wrapping code and data 
+ together into a single unit is called Encapsulation in java.
+-We can create a encapsulated class in java by using private class.Now we are using getter and setter method to set and get the data in it.
+
+  Example:
+   package Oops;
+
+public class Encapsulation {
+    private int id;
+    private String name;
+    
+    
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+    
+    
+}
+
+
+*Here that code bounded with in a single class.by using private class with getter and setter method.
+
+SUPER keyword
+--------------
+The super keyword is a reference variable which we are used to refer the immediate parent class.
+
+Use of super keyword
+--------------------
+-It can be used to refer immediate parent class instance variable.
+
+Example:
+package Oops;
+
+class superM{
+	int a=10;
+}
+public class superkeyword extends superM {
+   int a=20;
+   void val(int a) {
+	   System.out.println(super.a);
+   }
+   public static void main(String[] args) {
+	superkeyword s=new superkeyword();
+	s.val(30);
+}
+}
+
+-It can be invoke immediately parent class method.
+
+Example:
+package Oops;
+
+class supermethod{
+	void m1() {
+		System.out.println("I am running");
+	}
+}
+ class superkeywordwithmethd extends supermethod {
+     void m1() {
+    	 System.out.println("I am dancing");
+     }
+     void m2() {
+    	 
+    	 super.m1();
+     }
+     public static void main(String[] args) {
+    	 superkeywordwithmethd s=new superkeywordwithmethd();
+    	 s.m2();
+	}
+}
+
+-It can be invoke immediately parent class constructor.
+
+FINAL keyword
+--------------
+- The final keyword is a non-access modifier used for the classes ,methods and variables which makes them non-changeable(Impossible to inherit and override).
+-We are using the final keyword by using 3 ways 
+ 1.Variable
+  Example:
+   class Test{
+    public static void main(String[] args){
+    final i=10;
+//   i=i+20;
+   System.out.println(i);
+}
+}
+2.Methods
+
+Example:
+package Oops;
+
+class supermethod{
+	void m1() {
+		System.out.println("I am running");
+	}
+}
+ class superkeywordwithmethd extends supermethod {
+     void m1() {
+    	 System.out.println("I am dancing");
+     }
+     void m2() {
+    	 
+    	 super.m1();
+     }
+     public static void main(String[] args) {
+    	 superkeywordwithmethd s=new superkeywordwithmethd();
+    	 s.m2();
+	}
+}
+
+
+
+Static variable
+---------------
+- It is also called class variable.
+- We are using static keyword for memory management.
+- Static variable is used to refer to common property of all objects.
+- The static variable gets memory only once in the class area at the time of class loading.
+
+Example:
+  package Oops;
+
+public class staticvariable{
+	int id;
+	String name;
+	static String company="nexwave";
+	
+//	Here company name is same for every employee so we have to use STATIC keyword for the company variable
+	public staticvariable(int id,String name) {
+		this.id=id;
+		this.name=name;
+		
+	}
+	void display() {
+		System.out.println(id+" "+name+" "+company);
+	}
+	public static void main(String[] args) {
+		staticvariable s1=new staticvariable(1,"Manas");
+		s1.display();
+		
+		staticvariable s2=new staticvariable(2,"Ranjan");
+		s2.display();
+	}
+}
+
+2.Static method
+---------------
+- If you apply static keyword with any method is called as static method.
+  
+Rules of static method
+----------------------
+-"static " method belongs to the class,not to the object.
+- A Static method can be accessed directly by class name and does not need any object.
+- A Static method can access only static data.It cannot access non-static data.
+- A Static method can call only other static methods and cannot call a non-static method.
+- A Static method cannot refer to "this" or "super" keyword in anyway.
+
+ Example:
+   package Oops;
+
+public class staticmethod {
+	
+	static void display() {
+		System.out.println("1");
+	}
+   public static void main(String[] args) {
+       display();
+     // staticmethod.display();
+  }
+}
+
+3.Static Block
+--------------
+It is used to initialize the static data member.
+It is executed before the main method at the time classloading.
+
+Example:
+package Oops;
+
+public class staticblock {
+  static {
+	  System.out.println("Hello Manas");
+  }
+  public static void main(String[] args) {
+	System.out.println("I am main method");
+}
+  static {
+	  System.out.println("I am the second static method");
+  }
+}
+
+
+
+
+
+                                                                           EXCEPTION HANDLING
+                                                                              ---------------------
+* What is Exception in java   
+In java, Exception is an event which intrupts the flow of code in java.
+-It is an object which is thrown at runtime.
+
+*What is Exception Handling
+- Exception handling is a mechanism which to handle the runtime exception.which is unchecked exception like ClassNotFoundException,IOException etc.
+
+Example:
+  
+class Test{
+ public static void main(String[] args){
+  int a=10 , b=0;
+  int c=a/b;
+
+  System.out.println("The division is:"+c);
+  }
+}
+ Output:
+It will show Arithmetic Exception
+
+Types of java Exception
+-----------------------
+1.Checked Exception
+2.Unchecked Exception
+
+1.Checked Exception
+-------------------
+The classes that directly inherit the Throwable class except RuntimeException and Error is known as Checked Exception.
+Example:
+IOException,SQLException etc.
+
+2.Unchecked Exception
+---------------------
+-The class that inherit the RuntimeException are known Unchecked exception.
+Example:
+ArithmeticException,NullPointerException,
+ArrayIndexOutOfBoundsException
+
+- These are not checked at compile-time but they are checked at runtime. 
+
+
+Java Exception Keyword
+----------------------
+There are 5 types of excepion keyword
+1.try 2.catch 3.Finally 4.Throw 5.Throws
+
+1.TRY
+-----
+- Try keyword is used to specify a block where we should place an exception code.
+-We can not use try block alone .The try block must followed by either catch or finally keyword.
+
+2.CATCH
+-------
+This is a block which is used to handle the exception.
+-We can not use catch block without any try block.It can be followed by finally block later.
+
+Example of TRY-CATCH Block:
+    package ExceptionHandling;
+
+public class TryCatch {
+     public static void main(String[] args) {
+    	 System.out.println("1");
+		try {
+			System.out.println("2");
+			int a=100;
+			int b=0;
+			int c=a/b;
+			System.out.println("3");
+			System.out.println("The division is:"+c);
+			System.out.println("4");
+		}catch(Exception e){
+			System.out.println("5");
+			System.out.println(e);
+			System.out.println("6");
+		}
+		System.out.println("7");
+		System.out.println("HELLO ! I got the exception");
+		
+	}
+}
+
+3.FINALLY
+---------
+- This is a block which is used to execute of necessary code of the program.
+-It can execute whether an exception is handled or not.
+
+Example:
+package ExceptionHandling;
+
+public class TryCatchFinally {
+   public static void main(String[] args) {
+	try {
+		int a=100;
+		int b=0;
+		int c=a/b;
+		System.out.println("The division is:"+c);
+	}
+	catch(Exception e) {
+		System.out.println(e);
+	}
+	finally {
+		System.out.println("This is a finally block");
+	}
+}
+}
+
+
+4.THROW
+--------
+-The throw keyword is used to allows you to create a custom error.
+-It used together with an exception type like ArithematicException,FileNotFoundException etc..
+ 
+Example:
+ 
+public class Test{
+ public static void main(String[] args){
+     Test t=new Test();
+     t.add();
+}
+public void add(){
+   int age=18;
+Try{
+if(age<18){
+   throw new ArithematicException("Age is not valid");
+}
+else{
+ System.out.println("Age is valid");
+}
+}catch(Exception e){
+   System.out.println(e);
+}
+
+  }
+}
+
+
+5.Throws
+--------
+This keyword is declared the exceptions.It specifies that may occur an exception in the method.
+-It does not throw an exception.
+
+Example:
+package ExceptionHandling;
+
+import java.io.IOException;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Main ob = new Main();
+		System.out.println("print this");
+		System.exit(0);
+			try {
+				ob.setUser();
+				ob.getUser();
+			}catch(IOException ex) {
+				System.out.println("io exception coming");
+			}catch(Exception ex) {
+				System.out.println("exception is coming");
+			}
+	}
+	
+	
+	final void getUser() throws Exception {
+		int age = 18;
+
+			if(age <= 18){
+				throw new Exception("Not eligible...");
+			} else {
+				System.out.println(age);
+			}
+
+		System.out.println("SOMEHTING");
+	}
+	
+	void setUser() throws IOException {
+		int age = 18;
+		if(age == 18) {
+			throw new IOException("Not eligible");
+		} else {
+			System.out.println("something");
+		}
+	}
+	
+}
+
+
+
+
+
+
+                          MULTITHREADING
+                       --------------------
+
+*What is Multitasking
+- Multitasking is performing multiple task at the
+single time is called as multitasking.
+
+-We can use this for the increase the performance of CPU.
+-It is of 2 types
+1.Process based Multitasking 
+2.Thread based multitasking
+
+Example:  VLC Media , Browser are connected with Operating system.
+
+*What is multiprocessing
+Multiprocessing is when our system is connected with multiple processor in orders to complete the task is called as multiprocessing.
+
+- It is suitable with system level or operating system level.
+
+Example:
+VLC is connected with OS and that OS is connected with Different CPU like CPU1,CPU2,CPU3
+
+
+----------------------------------------------
+            	CONSTRUCTOR
+                 -------------
+- Constructor is a block(similar to method) having same name as the class name.
+
+- It does not have retunr type and including void also not applicable.
+
+-The only modifiers applicable for constructor are public,protected,Default and private. 
+
+-It executes automatically when we create an object.
+
+Example:
+  class Test{
+    public Test(){       //It is a construtor
+
+     }
+   public static void main(String[] args){
+      Test t=new Test();
+   }
+}
+
+*Why we will use the constructor
+- Constructor is used for the initialize the object 
+ 
+Types of constructor
+--------------------
+1.Default constructor 
+- It will generate automatically by compiler
+Example:
+package Constructor;
+
+public class prac1 {
+     int i;
+      public static void main(String[] args) {
+		prac1 p=new prac1();
+		System.out.println(p.i);
+		
+	}
+}
+
+2.No-arg/Non-parameterized constructor 
+-In this constructor we do not use any parameter inside the constructor.
+
+Example:
+package Constructor;
+
+public class Noargumentconstructor {
+	Noargumentconstructor(){
+		System.out.println("This is a no-argument constructor");
+	}
+    public static void main(String[] args) {
+    	Noargumentconstructor n=new Noargumentconstructor();
+	}
+}
+
+3.Parameterized constructor
+- In this constructor we can use para inside the constructor.
+
+Example:
+package Constructor;
+
+public class Parameterizedconstructor {
+	Parameterizedconstructor(int a){
+            System.out.println("This is a parameterized constructor");		
+	}
+   public static void main(String[] args) {
+	   Parameterizedconstructor p=new Parameterizedconstructor(10);
+}
+}
+
+
+*Why we need constructor
+-Constructor are methods that are automatically execute every time you create an
+object.
+
+-The purpose of constructor is to construct an object and assigns the values to object member.
+
+
+
+* WHAT IS TOSTRING
+- ToString is a method which is used to get the string representation of an object.
+syntax:
+public String toString(){
+  return getClass().getName()+"@"+Integer.toHexString(hashCode());
+}
+
+Example:
+
+   package ToString;
+
+ class str{
+	int id;
+	String name;
+	public str(int id,String name){
+		this.id=id;
+		this.name=name;
+	}
+	@Override
+	public String toString() {
+		return "id=" + id + ", name=" + name + " ";
+	}
+
+}
+public class Strin{
+	public static void main(String[] args) {
+		str s=new str(1,"Tanuja");
+		System.out.println(s);
+		
+	}
+}
+
+
+                       JAVA 8 NEW FEATURES
+                      ---------------------
+What is java 8 features 
+- It is a new feature of java. This is having 8 features for in java.
+
+    1. LAMBDA EXPRESSION
+      -----------------
+- Lambda expression is a anonymous function
+  1.No Name
+  2.No Modifier
+  3.No Return type
+- Lambda expression helps us to write our code in functional style.It provides a clear and concise way to implement SAM interface(Single Abstract Method) by using an expression.
+
+Advantages
+----------
+- Reduce the lines of code.
+- Sequencial and parallel execution support by passing behavior as an argument in m thods.
+- To call APIs very effectively
+- To write more Readable,maintainable and consise code.
+
+Important Rules of Lambda
+-------------------------
+- If the body of Lambda Expression contain only one statement then curly braces are  optional. 
+- Java compiler also inter the type of variable passes in argument,hence type is optional.
+
+Functional Interface
+--------------------
+- If the functional interface contains only one abstract methods then it is Functional interface.
+ Example : Runnable,Callable etc.
+- To call lambda we require functional interface.
+- Lambda is used to implement functional interface in very simple and short maner. 
+
+Example-1:With lambda expression with multiple parameter
+ 
+   @FunctionalInterface
+   interface i{
+	   public String display(int a,String b);
+   }
+
+   public class lambda {
+	   public static void main(String[] args) {
+		i o=(a,b)->{
+			return a+" ,"+b;
+		};
+		System.out.println(o.display(1, "Manas"));
+	}
+   }
+
+Example-2: Lambda expression with or without return keyword
+
+package lambdaexpression;
+
+@FunctionalInterface
+interface dis{
+	int display(int a,int b);
+}
+
+public class lambda1 {
+   public static void main(String[] args) {
+	   dis d=(a,b)->(a+b);  
+	   System.out.println(d.display(10,20));   // This is without return type
+	   
+	   dis d1=(a,b)->{
+		   return (a-b);    // This is return type lambda expression
+	   };
+	   System.out.println(d1.display(200, 100));
+  }
+}
+
+Example-3:Lambda expression with Foreach loop
+
+package lambdaexpression;
+
+@FunctionalInterface
+interface dis{
+	int display(int a,int b);
+}
+
+public class lambda1 {
+   public static void main(String[] args) {
+	   dis d=(a,b)->(a+b);  
+	   System.out.println(d.display(10,20));
+	   
+	   dis d1=(a,b)->{
+		   return (a-b);
+	   };
+	   System.out.println(d1.display(200, 100));
+  }
+}
+
+Example-4:Lambda expression with multiple statements
+
+package lambdaexpression;
+
+@FunctionalInterface
+interface mul{
+	String dis(String msg);
+}
+
+public class lambdawithmultiplestatements {
+  public static void main(String[] args) {
+	mul m=(msg)->{
+		String str1="I am java developer.";
+		String str2=str1+msg;
+		return str2;
+	};
+
+
+2.Method Reference
+------------------
+-  It is a refer method of functional interface.It is compact and easy form of lambda expression.
+-  Each time when you are using lambda expression to referring a method, You can replace your lambda expression with method   reference.
+
+Syntax:
+1.To refer to a method in an object
+     Object::methodName
+
+2.To print all elements in a list
+    list.forEach(s -> System.out.println(s));
+
+3.Shorthand to print all elements in a list
+   list.forEach(System.out::println);
+
+
+Types of Method Reference
+-------------------------
+  1.Reference to a static method 
+  ------------------------------
+- You can refer to static method defined in the class.
+syntax:
+  Class::StaticMethodName
+
+Example:
+
+interface Sayable{  
+    void say();  
+}  
+public class MethodReference {  
+    public static void saySomething(){  
+        System.out.println("Hello, this is static method.");  
+    }  
+    public static void main(String[] args) {  
+        // Referring static method  
+        Sayable sayable = MethodReference::saySomething;  
+        // Calling interface method  
+        sayable.say();  
+    }  
+}  
+
+
+2.Reference to an instance method
+---------------------------------
+ - To refer normal method 
+syntax:
+  Object::Normalmethod
+
+Example:
+  
+interface Sayable{  
+    void say();  
+}  
+public class InstanceMethodReference {  
+    public void saySomething(){  
+        System.out.println("Hello, this is non-static method.");  
+    }  
+    public static void main(String[] args) {  
+        InstanceMethodReference methodReference = new InstanceMethodReference(); // Creating object for class
+        // Referring non-static method using reference  
+            Sayable sayable = methodReference::saySomething;  
+        // Calling interface method  
+            sayable.say();  
+            // Referring non-static method using anonymous object  
+            Sayable sayable2 = new InstanceMethodReference()::saySomething; // You can use anonymous object also  
+            // Calling interface method  
+            sayable2.say();  
+    }  
+}  
+
+3.Reference to a constructor
+----------------------------
+- You can refer a constructor by using new keyword.
+syntax:
+ClassName::new 
+
+Example:
+
+interface Messageable{  
+    Message getMessage(String msg);  
+} 
+
+class Message{  
+    Message(String msg){  
+        System.out.print(msg);  
+    }  
+}  
+public class ConstructorReference {  
+    public static void main(String[] args) {  
+        Messageable hello = Message::new;  
+        hello.getMessage("Hello");  
+    }  
+}  
+
+3.Default Method and Static Method
+----------------------------------
+Default Method
+--------------
+- Java provides a facility to create a default method inside the interface.Methods which are defined inside the interface and tagged with default are known default methods.
+-These methods are non-abstract method.
+
+Advantage
+---------
+Default methods  enable you to add new functionality to existing interfaces and ensure binary compatibility with code written for older version of those interfaces.
+
+Example:
+package Defaultmethod;
+
+interface say {
+	default void display() {
+		System.out.println("Hiii! This is default method");
+	}
+}
+
+public class defaultmethd2 implements say {
+
+	public static void main(String[] args) {
+		defaultmethd2 d = new defaultmethd2();
+		d.display();
+
+	}
+}
+
+Example-2
+It is the example of method,class with default method
+
+package Defaultmethod;
+
+interface i{
+	default void show() {
+		System.out.println("This is a interface");
+	}
+}
+class A{
+	public void show() {
+		System.out.println("This is a class");
+	}
+}
+
+public class Defaultmthd extends A implements i{
+	public static void main(String[] args) {
+		Defaultmthd d=new Defaultmthd();
+		d.show();
+	}
+}
+
+
+Static Method
+-------------
+- You can also define static methods inside the interface.Static methods are used to define utility methods.
+
+Advantages
+----------
+- The main advantage is that they are more efficient than non-static methods since compiler can inline the code of a static method into the caller.
+- They can also be accessed form anywhere in your code without having to create an instance of the class.
+
+Example
+
+package Defaultmethod;
+
+interface i1{
+	static void show() {
+	System.out.println("This is static method");
+	}
+	
+}
+public class staticmthd {
+  public static void main(String[] args) {
+	i1.show();  // Here className with methodName .I am calling static method
+  }
+}
+	System.out.println(m.dis("This is lambda expressions."));
+   }
+}
+
+
+4.Stream API
+------------
+- This is one feature of java 8 called java.util.stream .This package consist of classes , interfaces and enum allows function-style operations on the elements.
+- You can use stream by importing java.util.stream package.
+
+*What is Stream
+- These streams are related to  Collection frameworks/(Group of objects). These streams are very different from io streams, io streams are the sequence of data.
+
+- Stream API is basically perform bulk operations and process the objects of collection.
+- Streams reduced the code length.
+
+
+
+
+
+                                 COLLECTION IN JAVA
+                               ----------------------
+- Collection is a interface which is used for the single unit of objects.Java collection provides many interface (set,List,Queue, Deque) and classes(Arraylist,vector,LinkedList,PriorityQueue,Hashset,Treeset,LinkedHashSet).
+
+* What is Framework?
+- A framework is a set of classes and interfaces which provide a ready-made architecture.
+
+ * What is collection framework
+- It is a framework which is set of classes and interfaces that provides architecture  to store  and manipulate group of objects.
+- It is the set of predefined classes and interface which is used to store multiple data. 
+
+1.Iterator interface
+- > It provides interface provides the facility of iterating the elements in a forward direction only.
+- > There are 3 methods 
+  1.hasNext()
+  2.next()
+  3.remove()
+
+2.Iterable interface
+- > This is the root interface for all the collection classes.The collection extends Iterable interface and all subclasses of collection interface also implement the iterable interface.
+
+3.Collection Interface
+- > The collection interface is a interface which is implemented by all the classes . It declares the methods that every collection will have.
+
+- The collection is having 3 types 
+1. List
+2. Queue
+3. Set
+
+1.List:
+It is a child interface of collection interface.It inhibits a list data structure in which we can store the ordered collection of objects.
+- It can have duplicate values.
+
+-It implemented by the classes ArrayList,LinkedList ,Vector and Stack.
+
+Syntax:
+ List<Data-type> list=new ArrayList<>();  
+ List<Data-type> list=new LinkedList();  
+ List<Data-type> list=new  Vector();
+ List<Data-type> list=new Stack();
+
+
+Example:
+package Collection;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.TreeSet;
+import java.util.Vector;
+
+public class List {
+  public static void main(String[] args) {
+	 System.out.println("Welcome to collection framework");
+	 
+//	 This is generic/Type-safe list
+	 ArrayList<String> name=new ArrayList<String>();
+	 name.add("Tanuja");
+	 name.add("Uttam");
+	 name.add("Raja");
+	 name.add("Manas");
+	 name.add("Manas"); //  This is taking duplicate value
+
+	 //	 System.out.println(name);
+	 
+//	 System.out.println(name.get(0));
+//	 System.out.println(name.get(1));   //It will print the exact position of list
+	 
+//	 For remove an element 
+	 name.remove("Manas");
+	 
+	 System.out.println(name);
+	 
+//	 For checking size
+	 System.out.println(name.size());
+	 
+//	 For checking the particular element is present or not
+	 System.out.println(name.contains("Tanuja"));
+	
+//	 check for the empty
+	 System.out.println(name.isEmpty());
+	 
+//	 To set element
+	 System.out.println(name.set(3, "Rosan"));
+	 
+//	 To remove all the element
+//	 name.clear();
+//	 System.out.println(name);
+	 
+	 Vector<String> vec=new Vector<>();
+	 vec.addAll(name);
+	 System.out.println(vec);
+	 
+	 
+//	 This is untype safe
+//	 LinkedList list=new LinkedList();
+//	 list.add("Rosan");
+//	 list.add(10);
+//	 list.add(100.00);
+//	 System.out.println(list);
+	 
+	 
+	 
+	 System.out.println("--------------------------------------------");
+	 	 
+}
+}
+
+2.Set
+It extends the collection interface.It represents the unordered set of element which does not allow us to store duplicate items.
+
+  1.HashSet
+  2.LinkedList  
+
+Syntax:
+Set<Datatype> s1=new HashSet<Datatype>();
+Set<Datatype> s1=new LinkedHashSet<Datatype>();
+Set<Datatype> s1=new Treeset<Database>();
+
+Example:
+package Collection;
+
+import java.util.HashSet;
+import java.util.TreeSet;
+
+public class Set {
+
+	public static void main(String[] args) {
+//		 SET
+//		 Hashset is not obey any order
+		 HashSet<Integer> has=new HashSet<>();
+		 has.add(70);
+		 has.add(20);
+		 has.add(30);
+		 has.add(40);
+		 System.out.println(has);
+		 
+//		 Treeset is obey order
+		 TreeSet<Integer> tr=new TreeSet<>();
+		 tr.addAll(has);
+		 System.out.println(tr);
+
+	}
+
+}
+  
+
+
+                           JAVA INTERCEPTOR
+                         --------------------
+- Interceptor is a 
+
+
+
